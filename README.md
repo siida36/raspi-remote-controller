@@ -12,13 +12,26 @@
 
 Raspberry Piで次のコマンドを実行してください。
 
+### （初回のみ）リポジトリをクローンする
+
+```bash
+cd ~/
+git clone https://github.com/siida36/raspi-remote-controller
+```
+
+### リポジトリへ移動
+
+```bash
+cd ~/raspi-remote-controller
+```
+
 ### （初回のみ）仮想環境を作成する
 
 ```bash
 python -m venv raspi-remote-controller
 ```
 
-### 仮想環境を実行する
+### 仮想環境を立ち上げる
 
 ```bash
 source raspi-remote-controller/bin/activate
@@ -53,6 +66,16 @@ sudo env "PATH=$PATH" uvicorn backend:app --reload --host 0.0.0.0 --port 8000
 ```
 
 ## フロントエンドの実行
+
+バックエンドで実行したターミナルとは別のターミナルで、フロントエンド側のコマンドを実行してください。
+
+### （オプション）ターミナルのセットアップ方法
+
+1. ターミナルを立ち上げます
+2. リポジトリに移動します（→[リポジトリに移動](#リポジトリに移動)）
+3. 仮想環境を立ち上げます（→[仮想環境を立ち上げる](＃仮想環境を立ち上げる)）
+
+### フロントエンド実行コマンド
 
 Raspberry Piで次のコマンドを実行してください。
 
