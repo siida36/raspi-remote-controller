@@ -43,10 +43,18 @@ source raspi-remote-controller/bin/activate
 pip install uvicorn fastapi streamlit RPi.GPIO
 ```
 
-## ハードウェアの設定
+## 実習1: ラズパイにつないだLEDをリモート操作する
+
+実習用ディレクトリに移動して、次の手順に従ってください。
+
+```bash
+cd ex1
+```
+
+### ハードウェアの設定
 
 1. Raspberry Piを立ち上げてください
-2. GPIOピンを適切な箇所に挿してください
+2. LEDに接続されたGPIOピンを適切な箇所に挿してください
     - デフォルトでは、ポート左下部の次の七本のピンに挿しています
         - GND
         - GPIO 13
@@ -57,7 +65,7 @@ pip install uvicorn fastapi streamlit RPi.GPIO
         - GPIO 26
     - ピン配置図: https://qiita.com/Erytheia/items/f362a3d68e57cd088713
 
-## バックエンドの実行
+### バックエンドの実行
 
 Raspberry Piで次のコマンドを実行してください。
 
@@ -65,17 +73,17 @@ Raspberry Piで次のコマンドを実行してください。
 sudo env "PATH=$PATH" uvicorn backend:app --reload --host 0.0.0.0 --port 8000
 ```
 
-## フロントエンドの実行
+### フロントエンドの実行
 
 バックエンドで実行したターミナルとは別のターミナルで、フロントエンド側のコマンドを実行してください。
 
-### （オプション）ターミナルのセットアップ方法
+#### （オプション）ターミナルのセットアップ方法
 
 1. ターミナルを立ち上げます
 2. リポジトリに移動します（→[リポジトリへ移動](#リポジトリへ移動)）
 3. 仮想環境を立ち上げます（→[仮想環境を立ち上げる](#仮想環境を立ち上げる)）
 
-### フロントエンド実行コマンド
+#### フロントエンド実行コマンド
 
 Raspberry Piで次のコマンドを実行してください。
 
